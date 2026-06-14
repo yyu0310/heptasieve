@@ -1,0 +1,17 @@
+# Your real configuration — never commit (contains your paths, whiteboard names, card titles)
+config.json
+
+# Runtime state and logs
+state.json
+logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store

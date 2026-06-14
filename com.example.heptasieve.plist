@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  launchd template for running HeptaSieve every 15 minutes on macOS.
+
+  1. Replace /ABSOLUTE/PATH/TO/heptasieve with the folder holding heptabase_sync.py.
+  2. Confirm the python3 path: run `which python3` (Homebrew is /opt/homebrew/bin/python3).
+  3. Save as ~/Library/LaunchAgents/com.example.heptasieve.plist
+  4. Load it:   launchctl load ~/Library/LaunchAgents/com.example.heptasieve.plist
+     Unload it: launchctl unload ~/Library/LaunchAgents/com.example.heptasieve.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.heptasieve</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/python3</string>
+        <string>/ABSOLUTE/PATH/TO/heptasieve/heptabase_sync.py</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>900</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/ABSOLUTE/PATH/TO/heptasieve/logs/sync.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/ABSOLUTE/PATH/TO/heptasieve/logs/sync.err.log</string>
+</dict>
+</plist>

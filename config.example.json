@@ -1,0 +1,30 @@
+{
+  "_comment_db_path": "Path to your local Heptabase SQLite database. The Heptabase desktop app maintains this file. ~ is expanded. On macOS the default is shown below; do not change it unless you know yours differs.",
+  "db_path": "~/Library/Application Support/project-meta/hepta.db",
+
+  "_comment_base_output_dir": "Where card_map cards are written. Paths inside card_map are relative to this directory. Use an absolute path.",
+  "base_output_dir": "/absolute/path/to/your/markdown/vault",
+
+  "_comment_board_output_dir": "Where whitelisted-whiteboard cards are written (defaults to base_output_dir if omitted). Use an absolute path.",
+  "board_output_dir": "/absolute/path/to/your/board/exports",
+
+  "_comment_whitelist": "Whiteboard-membership whitelist: whiteboard name -> destination. Only cards on each board's SURFACE are read; sub-whiteboards are NOT followed (add a sub-whiteboard's name here to include it). Destination value can be: (1) a relative path -> placed under board_output_dir; (2) an empty string -> board_output_dir root; (3) an absolute path -> a fixed home anywhere on disk (e.g. folding one board into a separate project). This map doubles as your routing index for where each board lands.",
+  "whitelist_whiteboards": {
+    "Public Notes": "",
+    "Reading List": "reading",
+    "Fitness Log": "/absolute/path/to/a/separate/project/synced-notes"
+  },
+
+  "_comment_blacklist": "Blacklist whiteboards: every card on these boards is excluded, and this wins over the whitelist (it catches a card placed on two boards by mistake). Cards here are subtracted before any title/content is read.",
+  "blacklist_whiteboards": [],
+
+  "_comment_section": "When true, board cards are further split into subfolders by their nested Heptabase section path (e.g. Exercise/Compound-lifts). Cards in no section land at the board folder root.",
+  "section_subfolders": true,
+
+  "_comment_card_map": "Title -> exact-path override layer (paths relative to base_output_dir). These titles are always synced regardless of which board they live on, and their path takes precedence over the whiteboard auto-naming above.",
+  "card_map": {
+    "My Reading Notes": "notes/reading-notes.md",
+    "Project Roadmap": "projects/roadmap.md",
+    "Recipes / Coffee": "kitchen/coffee.md"
+  }
+}
