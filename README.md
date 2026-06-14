@@ -24,7 +24,7 @@ That is the sieve. Only the cards you allow pass through.
 
 HeptaSieve reads your local Heptabase database directly and writes selected cards as Markdown files at destinations you choose. A `launchd` job runs it every 15 minutes, so the Markdown stays in step with your notes. The AI agent only ever reads the exported Markdown folder. It never touches the database.
 
-- **Reads the live local database.** Heptabase stopped offering local backups in late 2025, so reading the live DB is now the reliable path to continuous local sync.
+- **Reads the live local database.** Heptabase stopped offering [automatic local backups](https://support.heptabase.com/en/articles/11064116-how-does-auto-backup-work-in-heptabase) in late 2025, so reading the live DB is now the reliable path to continuous local sync.
 - **Structure-faithful conversion.** Tables, bullet / todo / toggle lists, nested sections, and videos are reverse-engineered from Heptabase's ProseMirror schema and rendered as clean Markdown.
 - **Any-destination routing.** Each whiteboard can land in its own folder, including an absolute path that drops a board straight into a separate project.
 

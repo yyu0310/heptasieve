@@ -24,7 +24,7 @@ AI 에이전트가 볼 수 있는 카드를 정확히 당신이 결정합니다.
 
 HeptaSieve는 로컬 Heptabase 데이터베이스를 직접 읽어 선택한 카드를 원하는 위치에 Markdown 파일로 저장합니다. `launchd` 작업이 15분마다 실행되어 Markdown을 노트와 동기화합니다. AI 에이전트는 내보낸 Markdown 폴더만 읽고, 데이터베이스에는 절대 접근하지 않습니다.
 
-- **라이브 로컬 데이터베이스 직접 읽기.** Heptabase는 2025년 말 로컬 백업 제공을 중단했습니다. 라이브 DB 직접 읽기가 지속적인 로컬 동기화의 신뢰할 수 있는 경로가 된 이유입니다.
+- **라이브 로컬 데이터베이스 직접 읽기.** Heptabase는 2025년 말 [자동 로컬 백업](https://support.heptabase.com/en/articles/11064116-how-does-auto-backup-work-in-heptabase) 제공을 중단했습니다. 라이브 DB 직접 읽기가 지속적인 로컬 동기화의 신뢰할 수 있는 경로가 된 이유입니다.
 - **구조 보존 변환.** 표, bullet / todo / toggle 목록, 중첩 섹션, 동영상을 Heptabase의 ProseMirror 스키마에서 역공학으로 분석해 깔끔한 Markdown으로 변환합니다.
 - **임의 목적지 라우팅.** 각 화이트보드를 개별 폴더에 저장할 수 있으며, 절대 경로로 특정 보드를 별도 프로젝트에 직접 배치하는 것도 가능합니다.
 

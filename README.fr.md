@@ -24,7 +24,7 @@ C'est le sieve (tamis). Seules les cartes que vous autorisez passent.
 
 HeptaSieve lit directement votre base de données Heptabase locale et écrit les cartes sélectionnées en fichiers Markdown aux destinations que vous choisissez. Une tâche `launchd` l'exécute toutes les 15 minutes pour que le Markdown reste synchronisé avec vos notes. L'agent IA ne lit que le dossier Markdown exporté. Il ne touche jamais à la base de données.
 
-- **Lit la base de données locale en direct.** Heptabase a cessé de proposer des sauvegardes locales fin 2025, donc lire la DB en direct est maintenant la voie fiable pour la synchronisation continue locale.
+- **Lit la base de données locale en direct.** Heptabase a cessé de proposer des [sauvegardes locales automatiques](https://support.heptabase.com/en/articles/11064116-how-does-auto-backup-work-in-heptabase) fin 2025, donc lire la DB en direct est maintenant la voie fiable pour la synchronisation continue locale.
 - **Conversion fidèle à la structure.** Les tableaux, les listes bullet / todo / toggle, les sections imbriquées et les vidéos sont obtenus par ingénierie inverse du schéma ProseMirror de Heptabase et rendus en Markdown propre.
 - **Routage vers n'importe quelle destination.** Chaque whiteboard peut aller dans son propre dossier, y compris un chemin absolu qui place un board directement dans un projet séparé.
 

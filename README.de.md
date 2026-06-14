@@ -24,7 +24,7 @@ Das ist das Sieve (Sieb). Nur die Karten, die Sie zulassen, kommen durch.
 
 HeptaSieve liest Ihre lokale Heptabase-Datenbank direkt und schreibt ausgewählte Karten als Markdown-Dateien an die von Ihnen gewählten Ziele. Ein `launchd`-Job führt es alle 15 Minuten aus, damit das Markdown mit Ihren Notizen synchron bleibt. Der KI-Agent liest nur den exportierten Markdown-Ordner. Er berührt die Datenbank nie.
 
-- **Liest die lokale Live-Datenbank.** Heptabase hat Ende 2025 aufgehört, lokale Backups anzubieten, daher ist das direkte Lesen der Live-DB nun der zuverlässige Weg für kontinuierliche lokale Synchronisierung.
+- **Liest die lokale Live-Datenbank.** Heptabase hat Ende 2025 aufgehört, [automatische lokale Backups](https://support.heptabase.com/en/articles/11064116-how-does-auto-backup-work-in-heptabase) anzubieten, daher ist das direkte Lesen der Live-DB nun der zuverlässige Weg für kontinuierliche lokale Synchronisierung.
 - **Strukturtreue Konvertierung.** Tabellen, Bullet / Todo / Toggle-Listen, verschachtelte Abschnitte und Videos werden aus Heptabases ProseMirror-Schema per Reverse Engineering gewonnen und als sauberes Markdown gerendert.
 - **Beliebiges Ziel-Routing.** Jedes Whiteboard kann in seinen eigenen Ordner gelangen, einschließlich eines absoluten Pfads, der ein Board direkt in ein separates Projekt legt.
 

@@ -24,7 +24,7 @@
 
 HeptaSieve 直接讀你本地的 Heptabase 資料庫，把選定的卡片寫成 Markdown 檔，放到你指定的位置。`launchd` 每 15 分鐘跑一次，讓 Markdown 與筆記保持同步。AI agent 永遠只讀匯出的 Markdown 資料夾，不碰資料庫。
 
-- **直讀 live 本地資料庫。** Heptabase 在 2025 年底停止提供本地備份，直讀 live DB 因此成為持續本地同步的可靠路徑。
+- **直讀 live 本地資料庫。** Heptabase 在 2025 年底停止提供[自動本地備份](https://support.heptabase.com/en/articles/11064116-how-does-auto-backup-work-in-heptabase)，直讀 live DB 因此成為持續本地同步的可靠路徑。
 - **結構保真轉換。** 表格、bullet／todo／toggle 清單、巢狀 section、影片，都是從 Heptabase 的 ProseMirror schema 逆向出來，轉成乾淨 Markdown。
 - **任意目的地路由。** 每張白板都能落到自己的資料夾，包含用絕對路徑把某張白板直接放進另一個專案。
 
