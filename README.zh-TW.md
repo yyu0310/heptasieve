@@ -14,7 +14,7 @@
 
 一開始的目標很單純：把 Heptabase 接上 Claude Code，讓 AI agent 讀我的筆記。
 
-官方路徑（Heptabase MCP server 與社群 CLI）都是 **fail-open**：一旦授權，agent 就能讀你整個知識庫。如果你的知識庫每張卡片都能公開，這沒問題；但只要你像多數人一樣，把機密卡片和想給 AI 用的卡片放在一起，這條路就行不通。
+官方路徑是 Heptabase 自家的 [CLI](https://github.com/heptameta/heptabase-cli-skills)（在 app 內 Settings、AI Features、CLI 開啟），它是 **fail-open**：一旦授權，agent 就能讀你整個知識庫。第三方工具如 `heptabase-mcp` server 也是同樣機制。如果你的知識庫每張卡片都能公開，這沒問題；但只要你像多數人一樣，把機密卡片和想給 AI 用的卡片放在一起，這條路就行不通。
 
 真正的洞察是：隱私牆不在 Heptabase 內部，而在「AI 讀得到什麼」這個邊界上。所以這類工具的價值不是「同步筆記」，而是 **把機密卡片留在 AI 碰不到的地方，只把其餘卡片匯出成 AI 可讀的 Markdown。**
 
@@ -45,7 +45,7 @@ HeptaSieve 直接讀你本地的 Heptabase 資料庫，把選定的卡片寫成 
 
 ## 與其他方案的對照
 
-| | HeptaSieve | 官方 Heptabase MCP / CLI | 其他匯出工具 |
+| | HeptaSieve | 官方 Heptabase CLI | 其他匯出工具 |
 |---|---|---|---|
 | 隱私模型 | fail-closed 白名單 | fail-open（整個知識庫） | 全量匯出 |
 | 持續本地同步 | 是（`launchd`，15 分鐘） | 依需求讀取 | 一次性匯出 |

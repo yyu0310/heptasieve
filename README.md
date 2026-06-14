@@ -14,7 +14,7 @@ English · [繁體中文](README.zh-TW.md) · [简体中文](README.zh-CN.md) ·
 
 It started with a simple goal: connect Heptabase to Claude Code so an AI agent could read my notes.
 
-The official routes (the Heptabase MCP server and community CLIs) are **fail-open**. Once you authorize them, the agent can read your entire knowledge base. That is fine if everything in your knowledge base is safe to share. It does not work if you keep confidential cards next to the ones you want an AI to use, which most people do.
+The official route is Heptabase's own [CLI](https://github.com/heptameta/heptabase-cli-skills), which you turn on in the app under Settings, AI Features, CLI. It is **fail-open**: once you authorize it, the agent can read your entire knowledge base. Third-party tools like the `heptabase-mcp` server work the same way. That is fine if everything in your knowledge base is safe to share. It does not work if you keep confidential cards next to the ones you want an AI to use, which most people do.
 
 The real insight: the privacy wall is not inside Heptabase. It is at the boundary of *what the AI can read*. So the value of a tool like this is not "sync my notes." It is **keep the confidential cards somewhere the AI cannot reach, and export only the rest into AI-readable Markdown.**
 
@@ -45,7 +45,7 @@ Two design principles fall out of this: **structural exclusion beats subtractive
 
 ## How it compares
 
-| | HeptaSieve | Official Heptabase MCP / CLI | Other export tools |
+| | HeptaSieve | Official Heptabase CLI | Other export tools |
 |---|---|---|---|
 | Privacy model | Fail-closed allow-list | Fail-open (full knowledge base) | Full export |
 | Continuous local sync | Yes (`launchd`, 15 min) | Read on request | One-shot export |
