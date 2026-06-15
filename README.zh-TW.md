@@ -14,13 +14,13 @@
 
 一開始的目標很單純：把 Heptabase 接上 Claude Code，讓 AI agent 讀我的筆記。
 
-官方路徑是 Heptabase 自家的 [CLI](https://github.com/heptameta/heptabase-cli-skills) 採 **fail-open** 機制，一旦授權，agent 就能讀你整個知識庫。第三方工具如 `heptabase-mcp` server 也是同樣機制。如果你的知識庫每張卡片都能公開就沒問題，但只要你像多數人一樣，把機密卡片和想給 AI 用的卡片放在一起，這就不可行。
+官方路徑是 Heptabase 自家的 [CLI](https://github.com/heptameta/heptabase-cli-skills) 採 **fail-open** 機制，一旦授權，agent 就能讀你整個知識庫，第三方工具如 `heptabase-mcp` server 也是同樣機制。如果你的知識庫每張卡片都能公開就沒問題，但只要你像多數人一樣，把機密卡片和想給 AI 用的卡片放在一起，這就不可行。
 
 問題的核心在於，隱私牆必須立在「AI 讀得到什麼」這條邊界上，而這條邊界落在 Heptabase 之外，在你怎麼把筆記餵給 AI 的那一層。所以這類工具真正要做的，是**把機密卡片留在 AI 碰不到的地方，只把其餘卡片匯出成 AI 可讀的 Markdown**。同步筆記只是簡單的那一半。
 
 ## 命名由來
 
-名字拆成三段各說一件事。`heptabase` 是資料來源，`local-sync` 說明它的機制，`security` 說明它的角色。
+名字拆成三段，各說一件事，`heptabase` 是資料來源，`local-sync` 說明它的機制，`security` 說明它的角色。
 
 Security 同時帶著兩層含義。第一層是安全：工具守在 AI 和你的知識庫之間，用 fail-closed 機制決定哪些卡片能進 AI 的視野、哪些一律擋在外面，不用擔心資料外洩。第二層更像一個盡責的秘書：主動在背景把筆記整理好，按你設定的位置每 15 分鐘自動同步，讓你打開 AI 工具就直接有內容可用，不必再手動管這件事。
 
